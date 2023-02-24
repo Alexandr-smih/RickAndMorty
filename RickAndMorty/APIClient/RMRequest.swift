@@ -24,7 +24,7 @@ final class RMRequest {
     private let endpoint: RMEndpoint
     
     /// Path components for API, if any
-    private let pathComponents: Set<String>
+    private let pathComponents: [String]
     
     /// Query arguments for API, if any
     private let queryParameters: [URLQueryItem]
@@ -46,7 +46,7 @@ final class RMRequest {
             // name = value&name = value
             let argumentString = queryParameters.compactMap({
                 guard let value = $0.value else {return nil}
-                return "\($0.name) = \(value)"
+                return "\($0.name)=\(value)"
             }).joined(separator: "&")
             
             string += argumentString
@@ -67,7 +67,7 @@ final class RMRequest {
     
     public init(
         endpoint: RMEndpoint,
-        pathComponents: Set<String> = [],
+        pathComponents: [String] = [],
         queryParameters: [URLQueryItem] = []
     ) {
         self.endpoint = endpoint
@@ -76,4 +76,8 @@ final class RMRequest {
     }
     
     // https://rickandmortyapi.com/api/character/2
+}
+
+extension RMRequest {
+    static let listCharactersRequests = RMRequest(endpoint: .character)
 }
