@@ -98,7 +98,7 @@
 				82946DB529A10A7E002D5320 /* Managers */,
 				82946DB429A10A22002D5320 /* APIClient */,
 				82946DB329A109FC002D5320 /* VievModels */,
-				82946DB229A109E9002D5320 /* Vievs */,
+				82946DB229A109E9002D5320 /* Views */,
 				82946DB129A109DA002D5320 /* Models */,
 				82946DB029A109A4002D5320 /* Controllers */,
 				82946DAA29A0FEA1002D5320 /* Info.plist */,
@@ -123,13 +123,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		82946DB229A109E9002D5320 /* Vievs */ = {
+		82946DB229A109E9002D5320 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				82D6B56529A90AE2005B0BC5 /* RMCharacterListView.swift */,
 				82C3C49629A9F99A00B44E76 /* RMCharacterCollectionViewCell.swift */,
 			);
-			path = Vievs;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		82946DB329A109FC002D5320 /* VievModels */ = {
