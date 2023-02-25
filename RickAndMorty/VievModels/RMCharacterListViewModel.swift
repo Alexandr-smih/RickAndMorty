@@ -7,15 +7,15 @@
 
 import UIKit
 
-final class CharacterListViewModel: NSObject {
+final class RMCharacterListViewModel: NSObject {
     
     func fetchCaracters() {
         RMServise.shared.execute(.listCharactersRequests,
                                  expecting: RMGetAllCharactersResponse.self) { result in
             switch result {
             case .success(let model):
-                print("Total: "+String(model.info.pages))
-                print("Total: "+String(model.results.count))
+                print("Example image url: "+String(model.results.first?.image ?? "No image"))
+                
             case .failure(let error):
                 print(String(describing: error))
             }
@@ -23,7 +23,7 @@ final class CharacterListViewModel: NSObject {
     }
 }
 
-extension CharacterListViewModel: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension RMCharacterListViewModel: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
    
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -31,8 +31,17 @@ extension CharacterListViewModel: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .systemGreen
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: RMCharacterCollectionViewCell.cellIdentifier,
+            for: indexPath
+        ) as? RMCharacterCollectionViewCell else {
+            fatalError("Unsupported cell")
+        }
+        let viewModel = RMCharacterCollectionViewCellViewModel(
+            characterName: "Alex",
+            characterStatus: .alive,
+            characterImageUrl: URL(string: "https://rickandmortyapi.com/api/character/avatar/1.jpeg"))
+        cell.configure(with: viewModel)
         return cell
     }
 
