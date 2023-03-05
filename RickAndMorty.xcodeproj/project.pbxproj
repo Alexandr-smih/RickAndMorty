@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8248585129B4C7E7006C6CD0 /* RMFooterLoadingCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8248585029B4C7E7006C6CD0 /* RMFooterLoadingCollectionReusableView.swift */; };
 		82946D9D29A0FEA0002D5320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82946D9C29A0FEA0002D5320 /* AppDelegate.swift */; };
 		82946D9F29A0FEA0002D5320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82946D9E29A0FEA0002D5320 /* SceneDelegate.swift */; };
 		82946DA129A0FEA0002D5320 /* RMTabVievController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82946DA029A0FEA0002D5320 /* RMTabVievController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8248585029B4C7E7006C6CD0 /* RMFooterLoadingCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFooterLoadingCollectionReusableView.swift; sourceTree = "<group>"; };
 		82946D9929A0FEA0002D5320 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82946D9C29A0FEA0002D5320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82946D9E29A0FEA0002D5320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				82D6B56529A90AE2005B0BC5 /* RMCharacterListView.swift */,
 				82C3C49629A9F99A00B44E76 /* RMCharacterCollectionViewCell.swift */,
 				82C3C49D29AA760800B44E76 /* RMCharacterDetailView.swift */,
+				8248585029B4C7E7006C6CD0 /* RMFooterLoadingCollectionReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				82946DC129A10E3F002D5320 /* RMLocationViewController.swift in Sources */,
 				82D6B55E29A23D1A005B0BC5 /* RMCharacterGender.swift in Sources */,
 				82C3C49C29AA66C100B44E76 /* RMCharacterDetailViewController.swift in Sources */,
+				8248585129B4C7E7006C6CD0 /* RMFooterLoadingCollectionReusableView.swift in Sources */,
 				82946DBF29A10DCF002D5320 /* RMCaracterViewController.swift in Sources */,
 				82946DA129A0FEA0002D5320 /* RMTabVievController.swift in Sources */,
 				82946D9D29A0FEA0002D5320 /* AppDelegate.swift in Sources */,
