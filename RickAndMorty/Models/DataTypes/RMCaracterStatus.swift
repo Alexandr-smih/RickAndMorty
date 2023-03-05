@@ -1,5 +1,5 @@
 //
-//  RMCaracterStatus.swift
+//  RMCharacterStatus.swift
 //  RickAndMorty
 //
 //  Created by Александр Михалев on 19.02.2023.
