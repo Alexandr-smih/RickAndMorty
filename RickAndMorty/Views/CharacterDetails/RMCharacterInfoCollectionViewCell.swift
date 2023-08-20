@@ -81,13 +81,14 @@ final class RMCharacterInfoCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-//        valueLabel.text = nil
-//        titleLabel.text = nil
-//        iconImageView.image = nil
+        valueLabel.text = nil
+        titleLabel.text = nil
+        iconImageView.image = nil
     }
     
     public func configure(with viewModel: RMCharacterInfoCollectionViewCellViewModel) {
-        
+        titleLabel.text = viewModel.title
+        valueLabel.text = viewModel.value
     }
 
 }
